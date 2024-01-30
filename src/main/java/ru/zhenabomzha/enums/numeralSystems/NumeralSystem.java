@@ -5,24 +5,24 @@ import java.util.Optional;
 
 public enum NumeralSystem {
 
-    BIN("BIN"),
-    OCT("OCT"),
-    DEC("DEC"),
-    HEX("HEX");
+    BIN(2),
+    OCT(8),
+    DEC(10),
+    HEX(16);
 
-    private final String numeralSystem;
+    private final int numeralSystem;
 
-    NumeralSystem(String numeralSystem) {
+    NumeralSystem(int numeralSystem) {
         this.numeralSystem = numeralSystem;
     }
 
-    public String getNumeralSystem() {
+    public int getNumeralSystem() {
         return numeralSystem;
     }
 
     public static Optional<NumeralSystem> checkNumeralSystem(String numeralSystem) {
         return Arrays.stream(NumeralSystem.values())
-                .filter(ns -> ns.getNumeralSystem().equals(numeralSystem))
+                .filter(ns -> ns.name().equals(numeralSystem))
                 .findFirst();
     }
 }

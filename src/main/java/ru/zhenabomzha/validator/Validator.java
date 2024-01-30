@@ -5,18 +5,13 @@ import ru.zhenabomzha.enums.numeralSystems.NumeralSystem;
 import ru.zhenabomzha.parser.ParserDto;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Validator {
 
-    public static final List<Character> symbols = new ArrayList<>();
-
-    public Validator() {
-        char[] symbolsForSet = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
-        for (char c : symbolsForSet) {
-            symbols.add(c);
-        }
-    }
+    public static final List<Character> SYMBOLS =
+            Arrays.asList('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F');
 
     public ValidatorDto validate(ParserDto dto) {
         List<String> validationErrors = checkNumeralSystem(dto.getSource(), dto.getTarget());
@@ -26,7 +21,10 @@ public class Validator {
         if(!checkValue(dto)) {
             throw new RuntimeException(Errors.VALUE_ERROR.getError());
         }
-        return new ValidatorDto(dto.getValue(), findNumeralBase(dto.getSource()),findNumeralBase(dto.getTarget()));
+        return new ValidatorDto(
+                dto.getValue(),
+                NumeralSystem.valueOf(dto.getSource()).getNumeralSystem(),
+                NumeralSystem.valueOf(dto.getTarget()).getNumeralSystem());
     }
 
     private List<String> checkNumeralSystem(String source, String target) {
@@ -55,7 +53,7 @@ public class Validator {
     }
 
     private boolean checkValue(ParserDto dto) {
-        final List<Character> allowedSymbols = symbols.subList(0, findNumeralBase(dto.getSource()));
+        final List<Character> allowedSymbols = SYMBOLS.subList(0, NumeralSystem.valueOf(dto.getSource()).getNumeralSystem());
         return dto.getValue().chars()
                 .mapToObj(n -> (char) n)
                 .allMatch(allowedSymbols::contains);
