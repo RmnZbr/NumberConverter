@@ -25,10 +25,9 @@ public class Converter {
         if (source == 10) {
             return Integer.valueOf(value);
         }
-        String[] splittedValue = value.split("");
-        int[] valueForConvert = new int[splittedValue.length];
-        for (int i = 0; i < splittedValue.length; i++) {
-            valueForConvert[i] = Integer.parseInt(splittedValue[i]);
+        int[] valueForConvert = new int[value.length()];
+        for (int i = 0; i < valueForConvert.length; i++) {
+            valueForConvert[i] = value.charAt(i) > '9' ? value.charAt(i) - 'A' + 10 : value.charAt(i) - '0';
         }
         int[] numberInDecSystem = new int[valueForConvert.length];
         int result = 0;

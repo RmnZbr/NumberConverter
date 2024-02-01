@@ -38,20 +38,6 @@ public class Validator {
         return errors;
     }
 
-    private int findNumeralBase(String numeralSystem) {
-        switch (numeralSystem) {
-            case "BIN":
-                return 2;
-            case "OCT":
-                return 8;
-            case "DEC":
-                return 10;
-            case "HEX":
-                return 16;
-        }
-        return -1;
-    }
-
     private boolean checkValue(ParserDto dto) {
         final List<Character> allowedSymbols = SYMBOLS.subList(0, NumeralSystem.valueOf(dto.getSource()).getNumeralSystem());
         return dto.getValue().chars()

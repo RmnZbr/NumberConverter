@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2f5fcd4-ef82-4b67-a34e-191c38f54ba3" name="Changes" comment="NumberConverter">
+    <list default="true" id="a2f5fcd4-ef82-4b67-a34e-191c38f54ba3" name="Changes" comment="NumberConverter(Correction)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/converter/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/converter/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/enums/numeralSystems/NumeralSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/enums/numeralSystems/NumeralSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/validator/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/validator/Validator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +23,24 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="NumberConverter/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Corrections" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2baoVHZ9KGgbRCjO2WL7Kxml9EN" />
@@ -38,7 +55,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Changes&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -58,6 +75,8 @@
       <workItem from="1706474212062" duration="18709000" />
       <workItem from="1706557267749" duration="460000" />
       <workItem from="1706648986578" duration="4072000" />
+      <workItem from="1706697028372" duration="1694000" />
+      <workItem from="1706822171411" duration="1381000" />
     </task>
     <task id="LOCAL-00001" summary="NumberConverter">
       <option name="closed" value="true" />
