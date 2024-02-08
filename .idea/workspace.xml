@@ -4,27 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2f5fcd4-ef82-4b67-a34e-191c38f54ba3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/converter/Converter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/engine/Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/enums/errors/Errors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/enums/numeralSystems/NumeralSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/input/ConsoleUserInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/output/OutputService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/parser/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/parser/ParserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/validator/Validator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/validator/ValidatorDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    <list default="true" id="a2f5fcd4-ef82-4b67-a34e-191c38f54ba3" name="Changes" comment="NumberConverter(Correction)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/converter/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/converter/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/validator/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zhenabomzha/validator/Validator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +23,24 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="NumberConverter/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Corrections" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2baoVHZ9KGgbRCjO2WL7Kxml9EN" />
@@ -48,20 +49,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Changes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,11 +72,28 @@
       <option name="presentableId" value="Default" />
       <updated>1706462576151</updated>
       <workItem from="1706462577493" duration="2110000" />
-      <workItem from="1706474212062" duration="16980000" />
+      <workItem from="1706474212062" duration="18709000" />
+      <workItem from="1706557267749" duration="460000" />
+      <workItem from="1706648986578" duration="4072000" />
+      <workItem from="1706697028372" duration="1694000" />
+      <workItem from="1706822171411" duration="1381000" />
     </task>
+    <task id="LOCAL-00001" summary="NumberConverter">
+      <option name="closed" value="true" />
+      <created>1706493012946</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706493012946</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="NumberConverter" />
+    <option name="LAST_COMMIT_MESSAGE" value="NumberConverter" />
   </component>
 </project>

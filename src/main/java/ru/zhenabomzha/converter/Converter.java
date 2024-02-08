@@ -16,7 +16,7 @@ public class Converter {
         Integer dec  = toDec(dto.getValue(), dto.getSource());
         StringBuilder sb = new StringBuilder();
         convertToList(dec, dto.getTarget()).stream()
-                .map(Validator.symbols::get)
+                .map(Validator.SYMBOLS::get)
                 .forEach(sb::append);
         return sb.toString();
     }
@@ -25,22 +25,19 @@ public class Converter {
         if (source == 10) {
             return Integer.valueOf(value);
         }
-
-        char[] charArray = value.toCharArray();
-        int[] number = new int[charArray.length];
-        for (int i = 0; i < number.length; i++) {
-            number[i] = Character.digit(charArray[i], source);
+        int[] valueForConvert = new int[value.length()];
+        for (int i = 0; i < valueForConvert.length; i++) {
+            valueForConvert[i] = value.charAt(i) > '9' ? value.charAt(i) - 'A' + 10 : value.charAt(i) - '0';
         }
-
-        int[] numberInDecSystem = new int[number.length];
+        int[] numberInDecSystem = new int[valueForConvert.length];
         int result = 0;
-        for (int i = 0; i < number.length; i++) {
-            int powValue = number.length - 1 - i;
+        for (int i = 0; i < valueForConvert.length; i++) {
+            int powValue = valueForConvert.length - 1 - i;
             int resultOfPow = 1;
             for(int j = 1; j <= powValue; j++) {
                 resultOfPow = resultOfPow * source;
             }
-            numberInDecSystem[i] = number[i] * resultOfPow;
+            numberInDecSystem[i] = valueForConvert[i] * resultOfPow;
             result = result + numberInDecSystem[i];
         }
         return result;
